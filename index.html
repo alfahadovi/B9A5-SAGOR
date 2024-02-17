@@ -31,9 +31,9 @@
 </head>
 
 <body>
-    <header class="lg:w-5/6 mx-auto pt-8-">
+    <header class="lg:w-5/6 mx-auto pt-8">
         <!-- Navber -->
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-base-100 mb-7">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -51,7 +51,7 @@
                         <li><a>Search</a></li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-[#030712] text-4xl font-extrabold raleway">P-Ticket</a>
+                <a class="btn btn-ghost text-[#030712] text-4xl font-extrabold raleway pl-0">P-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex
             ">
@@ -63,12 +63,23 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <div class="btn items-center justify-center bg-[#1DD1001A] border border-[#1DD10066] text-xl font-bold text-[#1DD100] hover:bg-white raleway">
-                    <a class="">Bus</a>
+                <div class="flex gap-3 bg-[#1DD1001A] border border-[#1DD10066] text-xl font-bold text-[#1DD100] hover:bg-white raleway rounded-xl px-7 py-4 cursor-pointer">
+                    <p>Bus</p>
                     <img src="images/bus-icon.png" alt="">
                 </div>
             </div>
         </div>
+        <div class="hero rounded-[32px] bg-cover h-[550px]" style="background-image: url(images/banner.png);">
+            <div class="hero-overlay bg-gradient-to-b from-[#030712FF] to-[#03071200] opacity-35 rounded-[32px]"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div>
+                <h1 class="raleway text-6xl font-extrabold leading-[86px] mb-4 text-white">End-to-End Travel with <br> <span class="text-[#1DD100]">Jubok Paribahan</span></h1>
+                <p class="text-lg leading-7 w-2/3 mx-auto font-normal mb-8 inter">He first ran for president on a far-left ticket. She would want to fight the election on a ticket of parliamentary democracy.
+                </p>
+                <button class="btn h-auto px-7 py-5 text-[20px] font-bold relaway text-[#030712] hover:text-white bg-[#1DD100] hover:bg-[#1cb505] border-0 rounded-xl">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
     </header>
 </body>
 
