@@ -219,21 +219,21 @@
 
                 </section>
                 <!-- booking -->
-                <section class="mt-6 bg-white rounded-3xl p-8 flex items-center ">
+                <section class="mt-6 bg-white rounded-3xl p-8 flex items-start ">
                     <div class="w-3/5 p-8">
-                        <h2>Select Your Seat</h2>
-                        <hr class="my-5">
+                        <h2 class="raleway text-2xl font-semibold text-[#030712]">Select Your Seat</h2>
+                        <hr class="my-5 border-dashed  bg-[#03071233]">
                         <div class="flex justify-between">
                             <div class="flex gap-2 items-center">
                                 <div><img src="images/seat-gray.png" alt=""></div>
-                                <p>Available</p>
+                                <p class="inter text-lg font-medium text-[#03071280]">Available</p>
                             </div>
                             <div class="flex gap-2 items-center">
                                 <div><img src="images/seat-green-filled.png" alt=""></div>
-                                <p>Selected</p>
+                                <p class="inter text-lg font-medium text-[#1DD100]">Selected</p>
                             </div>
                         </div>
-                        <hr class="my-5">
+                        <hr class="my-5 border-dashed  bg-[#03071233]">
                         <div class="space-y-6">
                             <div class="flex items-center justify-end gap-3">
                                 <button disabled class="w-28 h-14 bg-[#F7F8F8] rounded-xl"><img class="mx-auto"
@@ -412,17 +412,56 @@
                         </div>
                     </div>
                     <div class="w-2/5 p-7">
-                        <h2>Select Your Seat</h2>
-                        <hr>
-                        <div>
-                            <div>
-                                <div><img src="images/seat-gray.png" alt=""></div>
-                                <p>Available</p>
+                        <h2 class="raleway text-2xl font-semibold text-[#030712]">Select Your Seat</h2>
+                        <hr class="my-5 border-dashed  bg-[#03071233]">
+                        <div class="p-8 bg-[#F7F8F8] rounded-xl">
+                            <div class="flex justify-between mb-4 ">
+                                <p class="inter font-medium text-[#030712]">Seat <sup class="bg-[#1DD100] rounded-md text-white px-1 text-xs">0</sup></p>
+                                <p class="inter font-medium text-[#030712]">class</p>
+                                <p class="inter font-medium text-[#030712]">Price</p>
                             </div>
-                            <div>
-                                <div><img src="images/seat-green-filled.png" alt=""></div>
-                                <p>Selected</p>
+                            <hr class="my-5 border-dashed bg-[#03071233]">
+                            <div class="flex justify-between mb-4 inter text-[#03071299]">
+                                <div>
+                                    <p>Not Selected</p>
+                                </div>
+                                <div>
+                                    
+                                </div>
+                                <div>
+                                   
+                                </div>
                             </div>
+                            <hr class="my-5 bg-[#03071233]">
+                            <div class="flex justify-between mb-4 inter font-medium text-[#030712]">
+                                <p>Total Price</p>
+                                <p>BDT <span>0</span></p>
+                            </div>
+                            <div class="flex justify-between p-2 bg-white rounded-xl mb-6">
+                                <input class="flex-1 pl-5 outline-none" type="text" placeholder="Have any copupon?">
+                                <button class="btn hover:bg-green-600 px-[18px] py-3 bg-[#1DD100] text-white rounded-lg" disabled>Apply</button>
+                            </div>
+                            <div class="flex justify-between mb-4 inter font-medium text-[#030712] hidden">
+                                <p>Discount</p>
+                                <p>BDT <span>0</span></p>
+                            </div>
+                            <div class="flex justify-between mb-4 inter font-medium text-[#030712]">
+                                <p>Grand Total</p>
+                                <p>BDT <span>0</span></p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="" class="w-full inter font-semibold text-[#030712]">Passenger Name*</label>
+                            <input class="w-full px-6 py-5 rounded-xl border-[#03071266] inter mt-4 mb-6" type="text" placeholder="Enter your name">
+                            <label class="w-full  inter font-semibold text-[#030712]" for="">Phone Number*</label>
+                            <input class="w-full px-6 py-5 rounded-xl border-[#03071266] inter mt-4 mb-6" type="text" placeholder="Enter your phone number">
+                            <label class="w-full  inter font-semibold text-[#030712]" for="">Email ID</label>
+                            <input class="w-full px-6 py-5 rounded-xl border-[#03071266] inter mt-4 mb-6" type="email" name="" id="" placeholder="Enter your email id">
+                            <button class="w-full mt-5 bg-[#1DD100] py-5 raleway text-xl font-extrabold text-white rounded-2xl btn h-auto hover:bg-[#409f31]" disabled>Next</button>
+                        </div>
+                        <div class="flex justify-between mt-6">
+                            <p class="inter text-[#03071299] border-b-2 inline-block">Terms and Conditions</p>
+                            <p class="inter text-[#03071299] border-b-2 inline-block">Cancellation Policy</p>
                         </div>
 
                     </div>
