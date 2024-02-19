@@ -13,9 +13,9 @@ for (let i of seat) {
     i.addEventListener('click', function () {
 
 
-        if (count < 4) {
+        if (!i.classList.contains('selected') && count < 4) {
             i.classList.remove('bg-[#F7F8F8]', 'text-[#03071280]')
-            i.classList.add('bg-[#1DD100]', 'text-white')
+            i.classList.add('bg-[#1DD100]', 'text-white', 'selected')
 
             let removeElement = document.getElementById('defult');
             removeElement.innerText = '';
@@ -56,9 +56,19 @@ for (let i of seat) {
 
             }
 
+            let single = document.getElementById('single')
+            single.classList.add('hidden')
+
+
         } else {
-            let error = document.getElementById('error');
-            error.classList.remove('hidden');
+            let errors = document.getElementById('error');
+            let single = document.getElementById('single');
+            if (i.classList.contains('selected')) {
+                single.classList.remove('hidden')
+            }
+            else {
+                errors.classList.remove('hidden')
+            }
         }
 
 
@@ -68,4 +78,15 @@ for (let i of seat) {
 }
 
 
+function checkInputs() {
+    let nameInput = document.getElementById('nameInput').value;
+    let numberInput = document.getElementById('numberInput').value;
+    let button = document.getElementById('next');
+    let number = parseInt(numberInput)
+    if ( nameInput  && number ) {
+        button.removeAttribute('disabled');
+    }else{
+        button.setAttribute('disabled' , 'disabled')
+    }
+}
 

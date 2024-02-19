@@ -224,9 +224,21 @@
                         <h2 class="raleway text-2xl font-semibold text-[#030712]">Select Your Seat</h2>
                         <hr class="my-5 border-dashed  bg-[#03071233]">
                         <div id="error" role="alert" class="alert alert-error mb-5 hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                             <span>Sorry, more than 4 tickets are not sold</span>
-                          </div>
+                        </div>
+                        <div id="single" role="alert" class="alert alert-error mb-5 hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>Available seat click , please</span>
+                        </div>
                         <div class="flex justify-between">
                             <div class="flex gap-2 items-center">
                                 <div><img src="images/seat-gray.png" alt=""></div>
@@ -247,9 +259,9 @@
                                 <p class="inter text-lg font-medium text-[#03071280] text-center mr-4">A</p>
                                 <section class="flex gap-16">
                                     <div class="flex gap-10">
-                                        <button id="A1"
+                                        <button
                                             class="serial inter text-lg font-medium w-28 h-14 bg-[#F7F8F8] rounded-xl text-[#03071280]">A1</button>
-                                        <button id="A2"
+                                        <button
                                             class="serial inter text-lg font-medium w-28 h-14 bg-[#F7F8F8] rounded-xl text-[#03071280]">A2</button>
                                     </div>
                                     <div class="flex gap-10">
@@ -443,11 +455,14 @@
                                 <p>BDT <span id="total-tk">0</span></p>
                             </div>
                             <div class="flex justify-between p-2 bg-white rounded-xl mb-6">
-                                <input id="textInput" class="flex-1 pl-5 outline-none" type="text" placeholder="Have any copupon?">
-                                <button id="apply" class="btn hover:bg-green-600 px-[18px] py-3 bg-[#1DD100] text-white rounded-lg"
+                                <input id="textInput" class="flex-1 pl-5 outline-none" type="text"
+                                    placeholder="Have any copupon?">
+                                <button id="apply"
+                                    class="btn hover:bg-green-600 px-[18px] py-3 bg-[#1DD100] text-white rounded-lg"
                                     disabled>Apply</button>
                             </div>
-                            <div id="discount" class="flex justify-between mb-4 inter font-medium text-[#030712] hidden">
+                            <div id="discount"
+                                class="flex justify-between mb-4 inter font-medium text-[#030712] hidden">
                                 <p>Discount</p>
                                 <p>BDT -<span id="disPrice">0</span></p>
                             </div>
@@ -456,20 +471,36 @@
                                 <p>BDT <span id="grand">0</span></p>
                             </div>
                         </div>
-                        <div class="mt-6">
+                        <form class="mt-6">
                             <label for="" class="w-full inter font-semibold text-[#030712]">Passenger Name*</label>
-                            <input class="w-full px-6 py-5 rounded-xl border-[#03071266] inter mt-4 mb-6" type="text"
+                            <input id="nameInput" oninput="checkInputs()"
+                                class="w-full px-6 py-5 rounded-xl border-[#03071266] inter mt-4 mb-6" type="text"
                                 placeholder="Enter your name">
                             <label class="w-full  inter font-semibold text-[#030712]" for="">Phone Number*</label>
-                            <input class="w-full px-6 py-5 rounded-xl border-[#03071266] inter mt-4 mb-6" type="text"
+                            <input id="numberInput" oninput="checkInputs()"
+                                class="w-full px-6 py-5 rounded-xl border-[#03071266] inter mt-4 mb-6" type="text"
                                 placeholder="Enter your phone number">
                             <label class="w-full  inter font-semibold text-[#030712]" for="">Email ID</label>
                             <input class="w-full px-6 py-5 rounded-xl border-[#03071266] inter mt-4 mb-6" type="email"
                                 name="" id="" placeholder="Enter your email id">
-                            <button
+                            <button id="next" onclick="my_modal_5.showModal()"
                                 class="w-full mt-5 bg-[#1DD100] py-5 raleway text-xl font-extrabold text-white rounded-2xl btn h-auto hover:bg-[#409f31]"
                                 disabled>Next</button>
-                        </div>
+                            <dialog id="my_modal_5" class="w-[50%] mx-auto p-9 modal modal-bottom sm:modal-middle">
+                                <div class="modal-box">
+                                    <div class="w-24 mx-auto"><img src="images/success.png" alt=""></div>
+                                    <h2 class="text-center roboto font-bold text-2xl text-[#27AE60] py-9">Success</h2>
+                                    <p class="text-center roboto font-medium text-xl text-[#4A4A4A]">Thank you for Booking Our Bus Seats.
+                                        We are working hard to find the best service and deals for you. </p>
+                                    <p class="text-center roboto font-light text-xl text-[#4A4A4A]">Shortly you will find a confirmation in your email.</p>
+                                    <div class="modal-action  justify-center">
+                                        <form method="dialog">
+                                            <button class="btn py-4 px-20 bg-[#1DD100]  raleway text-xl font-extrabold text-white rounded-2xl  hover:bg-[#409f31] h-auto">Continue</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </form>
                         <div class="flex justify-between mt-6">
                             <p class="inter text-[#03071299] border-b-2 inline-block">Terms and Conditions</p>
                             <p class="inter text-[#03071299] border-b-2 inline-block">Cancellation Policy</p>
