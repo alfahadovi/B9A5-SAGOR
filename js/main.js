@@ -2,10 +2,10 @@ function buying() {
     let sectionCalling = document.getElementById('callingFrom');
     sectionCalling.scrollIntoView({ behavior: 'smooth' })
 }
-function newUpdate() {
-    let sectionCalling = document.getElementById('return');
-    sectionCalling.scrollIntoView({ behavior: 'smooth' })
-}
+// function newUpdate() {
+//     let sectionCalling = document.getElementById('return');
+//     sectionCalling.scrollIntoView({ behavior: 'smooth' })
+// }
 let seat = document.querySelectorAll('.serial')
 let perTicketPrice = 550;
 let totalPrice = 0;
