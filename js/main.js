@@ -13,7 +13,7 @@ for (let i of seat) {
     i.addEventListener('click', function () {
 
 
-        if (count < 4 || createElement.innerText === i.innerText) {
+        if (count < 4) {
             i.classList.remove('bg-[#F7F8F8]', 'text-[#03071280]')
             i.classList.add('bg-[#1DD100]', 'text-white')
 
@@ -26,7 +26,10 @@ for (let i of seat) {
 
 
             let totalTk = document.getElementById('total-tk');
-            totalTk.innerText = totalPrice
+            totalTk.innerText = totalPrice;
+
+            let grand = document.getElementById('grand');
+            grand.innerText = totalPrice;
 
             count++;
 
@@ -35,6 +38,23 @@ for (let i of seat) {
             available--;
 
             document.getElementById('left').innerText = available;
+            if (count === 4) {
+                let buttons = document.getElementById('apply');
+                buttons.removeAttribute('disabled')
+                buttons.addEventListener('click', function () {
+                    let inputType = document.getElementById('textInput');
+                    if (inputType.value === 'NEW15') {
+                        discount15(totalPrice)
+
+                    }
+                    else if (inputType.value === 'Couple 20') {
+
+                        discount20(totalPrice)
+                    }
+
+                })
+
+            }
 
         } else {
             let error = document.getElementById('error');
@@ -46,4 +66,6 @@ for (let i of seat) {
     })
 
 }
+
+
 
