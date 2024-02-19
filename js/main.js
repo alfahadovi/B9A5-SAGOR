@@ -45,12 +45,14 @@ for (let i of seat) {
                 buttons.addEventListener('click', function () {
                     let inputType = document.getElementById('textInput');
                     if (inputType.value === 'NEW15') {
-                        discount15(totalPrice)
+                        discount15(totalPrice);
+                        buttons.setAttribute('disabled','disabled')
 
                     }
                     else if (inputType.value === 'Couple 20') {
 
                         discount20(totalPrice)
+                        buttons.setAttribute('disabled','disabled')
                     }
 
                 })
@@ -60,7 +62,7 @@ for (let i of seat) {
             let single = document.getElementById('single')
             single.classList.add('hidden')
             
-            checkInputs(i)
+            checkInputs()
 
 
         } else {
