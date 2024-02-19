@@ -38,4 +38,15 @@ function discount15(price) {
 }
 
 
-
+function checkInputs(i) {
+    let nameInput = document.getElementById('nameInput').value;
+    let numberInput = document.getElementById('numberInput').value;
+    let button = document.getElementById('next');
+    let number = parseInt(numberInput)
+    
+    if (nameInput && number && i.classList.contains('selected')) {
+        button.removeAttribute('disabled');
+    } else {
+        button.setAttribute('disabled', 'disabled')
+    }
+}

@@ -2,10 +2,7 @@ function buying() {
     let sectionCalling = document.getElementById('callingFrom');
     sectionCalling.scrollIntoView({ behavior: 'smooth' })
 }
-// function newUpdate() {
-//     let sectionCalling = document.getElementById('return');
-//     sectionCalling.scrollIntoView({ behavior: 'smooth' })
-// }
+
 let seat = document.querySelectorAll('.serial')
 let perTicketPrice = 550;
 let totalPrice = 0;
@@ -62,6 +59,8 @@ for (let i of seat) {
 
             let single = document.getElementById('single')
             single.classList.add('hidden')
+            
+            checkInputs(i)
 
 
         } else {
@@ -82,15 +81,5 @@ for (let i of seat) {
 }
 
 
-function checkInputs() {
-    let nameInput = document.getElementById('nameInput').value;
-    let numberInput = document.getElementById('numberInput').value;
-    let button = document.getElementById('next');
-    let number = parseInt(numberInput)
-    if ( nameInput  && number ) {
-        button.removeAttribute('disabled');
-    }else{
-        button.setAttribute('disabled' , 'disabled')
-    }
-}
+
 
